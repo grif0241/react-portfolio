@@ -1,0 +1,14 @@
+.titles-text {
+  /* margin-top: 0; */
+  font-size: 1.25rem;
+  /* color: dimgray; */
+  /* bad color for dark mode...; another conditional for classes to be added */
+}
+.aboutContainer {
+  width: 100%;
+  /* text-align: start; */
+  margin-top: 0;
+
+  max-width: 30em;
+}
+

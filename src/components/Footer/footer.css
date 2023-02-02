@@ -1,0 +1,20 @@
+.footer-light {
+  /* background-color: #333; */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-dark {
+  color: #282c34;
+  text-align: center;
+  padding: 20px;
+}
+
+.footerLinksContainer {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

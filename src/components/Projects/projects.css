@@ -1,0 +1,13 @@
+.projectsContainer {
+  width: 100%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 30em;
+}
+
+.containerTitle {
+  margin-bottom: 2rem;
+}
+/* test */
