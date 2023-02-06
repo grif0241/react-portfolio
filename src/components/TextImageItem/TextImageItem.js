@@ -9,11 +9,11 @@ export default function TextImageItem({ project }) {
         <p style={{ textAlign: "start" }} >{project.description}</p>
         <div className='techSpanContainer'>
           {project.stack.map((stack, index) => (
-            <p className='techSpan'>{stack}</p>
+            <p key={index} className='techSpan'>{stack}</p>
           ))}
         </div>
       </div>
-      <img src={project.imgUrl} width={250} />
+      <img src={process.env.PUBLIC_URL + `/${project.fileName}`} width={250} alt={project.altText} />
 
     </div>
   )

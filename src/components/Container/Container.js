@@ -29,10 +29,9 @@ export default function Container() {
   return (
     // TODO fix light switch going all the way to edge for large screens
     <div className={darkMode ? `App-container-dark` : `App-container-light`}>
-      {/* {darkMode ? <WbSunnyOutlinedIcon className='light-switch-background-dark' onClick={handleSwitch} /> : <DarkModeOutlinedIcon className='light-switch-background-light' onClick={handleSwitch} />} */}
+
       {darkMode ? <BrightnessHigh size={35} className='light-switch-background-dark' onClick={handleSwitch} /> : <Moon size={35} className='light-switch-background-light' onClick={handleSwitch} />}
 
-      {/* <BrightnessHigh /> */}
       <Navibar />
       <About />
       <Projects />

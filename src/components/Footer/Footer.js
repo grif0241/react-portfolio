@@ -28,7 +28,7 @@ export default function Footer() {
 
 
       </div>
-      <p style={{ fontSize: 12 }}>&copy; {new Date().getFullYear()} Tyler Griffin, BScN, RN</p>
+      <p style={{ fontSize: 12, marginTop: 5 }}>&copy; {new Date().getFullYear()} Tyler Griffin, BScN, RN</p>
     </footer>
   )
 }

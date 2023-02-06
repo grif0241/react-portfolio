@@ -3,10 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import { ReactSVG } from 'react-svg';
-
 import { DarkModeContext } from '../../context/DarkModeContext';
-
 
 import { CodeSlash } from 'react-bootstrap-icons';
 
@@ -15,16 +12,13 @@ import './navibar.css';
 // TODO: put light switch inside nav bar to far right; collapsed navbar to far left; expanded navbar to far left
 function Navibar() {
   function refreshPage() {
-    window.location.reload(false);
+    window.location.reload(true);
   }
 
   const { darkMode } = useContext(DarkModeContext);
-  console.log(darkMode);
   return (
-    <Navbar className='navBar' variant={darkMode ? "dark" : "light"} bg="transparent" expand="lg">
+    <Navbar className='navBar' variant={darkMode ? "dark" : "light"} bg="transparent" expand="md">
       <Container>
-
-        <Navbar.Brand href="#home"> </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './form.css';
-import { DarkModeProvider, DarkModeContext } from '../../context/DarkModeContext';
+import { DarkModeContext } from '../../context/DarkModeContext';
 import { Github, Linkedin, Hash } from 'react-bootstrap-icons';
 
 
@@ -9,11 +9,13 @@ const Form = () => {
 
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const footerIconSize = 50;
+  const [msg, setMsg] = useState("");
+
 
   return (
-    <section id="contact" class="formContainer">
-      <div class="row justify-content-center">
-        <div class="col col-12">
+    <section id="contact" className="formContainer">
+      <div className="row justify-content-center">
+        <div className="col col-12">
           <h2 className='containerTitle'>Contact</h2>
           <p>Connect with me through email, GitHub, LinkedIn, or visit my development blog on HashNode to see what I am up to.</p>
 
@@ -35,38 +37,41 @@ const Form = () => {
           </div>
         </div>
 
-        <div class=" roundedcontainer form-container p-4 bg-light-shades mb-3">
+        <div className=" roundedcontainer form-container p-4 bg-light-shades mb-3">
           <form
             action="https://formspree.io/f/mayvydeo"
             method="POST">
             <fieldset>
-              <legend class="screen-reader-text">User Information</legend>
+              <legend className="screen-reader-text">User Information</legend>
 
-              <div class="row g-4 g-md-5">
-                <div class="col col-12 col-md-6">
-                  <label for="name" class="form-label">Name <i class="bi bi-person-circle"></i> <span class="required">*</span></label>
-                  <input type="text" class="form-control" name="name" id="name" placeholder="e.g. John Smith" required />
+              <div className="row g-4 g-md-5">
+                <div className="col col-12 col-md-6">
+                  <label htmlFor="name" className="form-label">Name <i className="bi bi-person-circle"></i> <span className="required">*</span></label>
+                  <input type="text" className="form-control" name="name" id="name" placeholder="e.g. John Smith" required />
                 </div>
 
-                <div class="col col-12 col-md-6">
-                  <label for="email" class="form-label">Email <i class="bi bi-envelope-fill"></i> <span class="required">*</span></label>
-                  <input type="email" class="form-control" name="_replyto" id="email" placeholder="e.g. johnsmith@mydomain.com" required />
+                <div className="col col-12 col-md-6">
+                  <label htmlFor="email" className="form-label">Email <i className="bi bi-envelope-fill"></i> <span className="required">*</span></label>
+                  <input type="email" className="form-control" name="_replyto" id="email" placeholder="e.g. johnsmith@mydomain.com" required />
                 </div>
 
-                <div class="col col-12 col-md-6">
-                  <label for="phone" class="form-label">Phone</label>
-                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="e.g. 123 456 7890" />
+                <div className="col col-12 col-md-6">
+                  <label htmlFor="phone" className="form-label">Phone</label>
+                  <input type="tel" className="form-control" name="phone" id="phone" placeholder="e.g. 123 456 7890" />
                 </div>
 
-                <div class="col col-12">
-                  <label for="message" class="form-label">Message <i class="bi bi-pen-fill"></i> <span class="required">*</span></label>
-                  <textarea type="message" rows="5" cols="33" class="form-control" name="message" id="message" placeholder="Message" required> </textarea>
+                <div className="col col-12">
+                  <label htmlFor="message" className="form-label">Message <i className="bi bi-pen-fill"></i> <span className="required">*</span></label>
+                  <textarea type="message" rows="5" cols="33" className="form-control" name="message" id="message" onChange={(ev) => {
+
+                    setMsg(ev.target.value);
+                  }} placeholder="Message" value={msg} required> </textarea>
                 </div>
 
-                <div class="col col-12 col-md-4">
-                  <label for="submit" class="form-label visually-hidden">Send</label>
-                  <input style={{ fontWeight: "bold", fontSize: 20 }} type="submit" class="form-control btn btn-1" value="Send" name="submit" id="submit" placeholder="send" />
-                  <p class="mt-2"><span class="required">*</span> <small>Indicates required field</small></p>
+                <div className="col col-12 col-md-4">
+                  <label htmlFor="submit" className="form-label visually-hidden">Send</label>
+                  <input style={{ fontWeight: "bold", fontSize: 20 }} type="submit" className="form-control btn btn-1" value="Send" name="submit" id="submit" placeholder="send" />
+                  <p className="mt-2"><span className="required">*</span> <small className='requiredField'>Indicates required field</small></p>
                 </div>
               </div>
             </fieldset>

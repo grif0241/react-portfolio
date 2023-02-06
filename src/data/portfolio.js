@@ -1,27 +1,39 @@
 export default [
   {
-    title: "Weather App",
-    imgUrl: './assets/react-weather-app.png',
-    stack: ['ReactJS', 'CSS'],
+    title: "Canadian News App",
+    fileName: 'rn-news-app.png',
+    altText: 'Picture of a mobile news application.',
+    imgUrl: './rn-news-app.png',
+    stack: ['ReactNative', 'EXPO', 'CSS'],
     link: 'https://www.google.com',
-    description: "A simple ReactJS weather app that takes advantage both the LocationIQ API and OpenWeather API to provide accurate weather data to the user."
-    // size: '12em'
+    description: "A mobile news application specific for Canadians. It features the ability to query news, search through top news in Canada, and even provide news to your local city if you allow it to use device location. It was created using EXPO React Native."
   },
   {
     title: "Giftr App - Full Stack",
-    imgUrl: './assets/flutter-gift-app.png',
+    imgUrl: './flutter-giftr.png',
+    fileName: 'flutter-giftr.png',
+    altText: 'Picture of a Flutter gifting application.',
     stack: ['Flutter', 'NodeJS', 'MongoDB'],
     link: 'https://www.google.com',
     description: "A full stack application built from the ground up. It features secure authentication for logins, Bcrypt for password hashing, NodeJS for the restfulAPI, MongoDB for document storage, and the Flutter framework for the front end."
-    // size: '12em'
   },
   {
-    title: "Hex Decimal Color Picker",
-    imgUrl: './assets/ios-color-picker.png',
+    title: "Hex-a-decimal Color Picker",
+    imgUrl: './ios-color-picker.png',
+    fileName: 'ios-color-picker.png',
+    altText: 'Picture of a iOS color picker application.',
     stack: ['SwiftUI'],
     link: 'https://www.google.com',
     description: "A simple Hex to RGBA calculator. It features input validation and the ability to dynamically adjust your color via sliders."
-    // size: '12em'
+  },
+  {
+    title: "Movie Suggester PWA",
+    imgUrl: './PWA.png',
+    fileName: 'PWA.png',
+    altText: 'Picture of a PWA movie suggester.',
+    stack: ['HTML', 'JavaScript', 'CSS'],
+    link: 'https://www.google.com',
+    description: "A PWA to suggest movies based on queries. It caches the assets of previously searched results and when not online, will display a page informing the user they have no connection. This PWA was created manually using JavaScript."
   },
 
 
