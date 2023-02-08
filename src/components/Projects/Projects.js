@@ -1,10 +1,16 @@
+// REACT
 import React from 'react';
-import portfolio from '../../data/portfolio';
+
+// STYLES
 import './projects.css';
+
+// COMPONENTS
 import ImageTextItem from '../ImageTextItem/ImageTextItem';
 import TextImageItem from '../TextImageItem/TextImageItem';
-
 import HorizontalLine from '../HorizontalLine/HorizontalLine';
+
+// DATA
+import portfolio from '../../data/portfolio';
 
 export default function Projects() {
   return (

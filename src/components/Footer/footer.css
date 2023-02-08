@@ -18,3 +18,10 @@
   align-items: center;
   gap: 1rem;
 }
+
+.screen-reader-text {
+  position: absolute;
+  width: 0.5px;
+  height: 0.5px;
+  overflow: hidden;
+}

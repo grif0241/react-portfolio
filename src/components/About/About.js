@@ -1,11 +1,12 @@
+// REACT
 import React from 'react';
+
+// STYLES
 import './about.css';
 
 export default function About() {
   return (
     <div className='aboutContainer'>
-      {/* TODO fix styling here */}
-
       <h1 style={{ marginBottom: 0, textAlign: "center", fontSize: 70, fontWeight: 900 }}>Tyler G</h1>
       <p className='titles-text'>Web and Mobile App Developer & Registered Nurse</p>
       <p style={{ textAlign: "start" }} >

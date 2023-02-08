@@ -32,25 +32,23 @@
 
 }
 
-.light-switch-background-dark{
+/* .light-switch-background-dark{
   background-color:orange;
   color: black;
   stroke: black;
   padding: 0.50rem;
   border-radius: 10px;
-  position: fixed;
-  right: 2rem;
-  top: 2rem;
+  justify-self: flex-end;
+  align-self: flex-end;
+} */
 
-}
-.light-switch-background-light{
+/* .light-switch-background-light{
   background-color:plum;
   color: white;
   stroke: white;
   padding: 0.50rem;
   border-radius: 10px;
-  position: fixed;
-  right: 2rem;
-  top: 2rem;
+  justify-self: flex-end;
+  align-self: flex-end;
 
-}
+} */

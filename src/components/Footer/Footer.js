@@ -1,28 +1,31 @@
+// REACT
 import React, { useContext } from 'react';
+
+// STYLES
+import { Github, Linkedin, Hash } from 'react-bootstrap-icons';
 import './footer.css';
 
-import { DarkModeProvider, DarkModeContext } from '../../context/DarkModeContext';
+// CONTEXT
+import { DarkModeContext } from '../../context/DarkModeContext';
 
-import { Github, Linkedin, Hash } from 'react-bootstrap-icons';
 
 export default function Footer() {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const footerIconSize = 25;
 
-
   return (
     <footer className={darkMode ? "footer-light" : "footer-dark"}>
       <div className='footerLinksContainer'>
 
-        <a target="_blank" href="https://github.com/grif0241">
+        <a target="_blank" href="https://github.com/grif0241"> <p className='screen-reader-text'>Website Link</p>
           <Github color={darkMode ? "ghostwhite" : "#282c34"} size={footerIconSize} />
         </a>
 
-        <a target='_blank' href="https://www.linkedin.com/in/tyler-griffin-a1558b188/" >
+        <a target='_blank' href="https://www.linkedin.com/in/tyler-griffin-a1558b188/" ><p className='screen-reader-text'>LinkedIn Link</p>
           <Linkedin color={darkMode ? "ghostwhite" : "#282c34"} size={footerIconSize} />
         </a>
 
-        <a target="_blank" href="https://tylerg.hashnode.dev/">
+        <a target="_blank" href="https://tylerg.hashnode.dev/"> <p className='screen-reader-text'>Blog Link</p>
           <Hash color={darkMode ? "ghostwhite" : "#282c34"} size={footerIconSize} />
         </a>
 
@@ -32,6 +35,3 @@ export default function Footer() {
     </footer>
   )
 }
-
-
-// https://acrobat.adobe.com/link/acrobat/add-comment?x_api_client_id=adobe_com&x_api_client_location=add_comment

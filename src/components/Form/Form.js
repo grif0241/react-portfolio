@@ -1,16 +1,20 @@
+// REACT
 import React, { useContext, useState } from 'react';
+
+// STYLES
 import './form.css';
-import { DarkModeContext } from '../../context/DarkModeContext';
 import { Github, Linkedin, Hash } from 'react-bootstrap-icons';
+
+// CONTEXT
+import { DarkModeContext } from '../../context/DarkModeContext';
 
 
 
 const Form = () => {
 
-  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeContext);
   const footerIconSize = 50;
   const [msg, setMsg] = useState("");
-
 
   return (
     <section id="contact" className="formContainer">
@@ -21,15 +25,15 @@ const Form = () => {
 
           <div className='linksContainer'>
 
-            <a target="_blank" href="https://github.com/grif0241">
+            <a target="_blank" href="https://github.com/grif0241"><p className='screen-reader-text' >Website Link</p>
               <Github color={darkMode ? "ghostwhite" : "#282c34"} size={footerIconSize} />
             </a>
 
-            <a target='_blank' href="https://www.linkedin.com/in/tyler-griffin-a1558b188/" >
+            <a target='_blank' href="https://www.linkedin.com/in/tyler-griffin-a1558b188/" ><p className='screen-reader-text' >LinkedIn Link</p>
               <Linkedin color={darkMode ? "ghostwhite" : "#282c34"} size={footerIconSize} />
             </a>
 
-            <a target="_blank" href="https://tylerg.hashnode.dev/">
+            <a target="_blank" href="https://tylerg.hashnode.dev/"> <p className='screen-reader-text' >Blog Link</p>
               <Hash color={darkMode ? "ghostwhite" : "#282c34"} size={footerIconSize} />
             </a>
 
