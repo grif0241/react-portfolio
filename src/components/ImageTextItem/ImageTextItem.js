@@ -1,16 +1,14 @@
 // REACT
-import React, { useContext } from 'react';
+import React from 'react';
 
 // COMPONENTS
 import './imageTextItem.css';
-
-import { DarkModeContext } from '../../context/DarkModeContext';
 
 export default function ImageTextItem({ project }) {
 
   return (
     <div className="imageTextCard">
-      <a target="_blank" href={project.link}> <p className='screen-reader-text' >{project.title} Click here to see demo</p>
+      <a rel="noreferrer" target="_blank" href={project.link}> <p className='screen-reader-text' >{project.title} Click here to see demo</p>
         <img className='projectImg' src={process.env.PUBLIC_URL + `/${project.fileName}`} width={250} alt={project.altText} />
       </a>
 
