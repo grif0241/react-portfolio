@@ -1,5 +1,5 @@
 // REACT
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState, useRef } from 'react';
 
 // STYLES
 import './form.css';
@@ -19,27 +19,32 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
+  const textareaRef = useRef();
+
+  useEffect(() => {
+    setEmail("");
+    setName("");
+    setPhoneNumber("");
+    setMessage("");
+    textareaRef.current.value = '';
+  }, []);
+
   // input handlers
   const handleMessage = (ev) => {
     setMessage(ev.target.value);
-  }
+  };
 
   const handleName = (ev) => {
     setName(ev.target.value);
-  }
+  };
 
   const handleEmail = (ev) => {
     setEmail(ev.target.value);
-  }
+  };
 
   const handlePhoneNumber = (ev) => {
     setPhoneNumber(ev.target.value);
-  }
-
-  const handleSubmit = (ev) => {
-    ev.preventDefault();
   };
-
 
   return (
     <section id="contact" className="formContainer">
@@ -67,7 +72,6 @@ const Form = () => {
 
         <div className=" roundedcontainer form-container p-4 bg-light-shades mb-3">
           <form
-            onSubmit={handleSubmit}
             action="https://formspree.io/f/mayvydeo"
             method="POST">
             <fieldset>
@@ -91,7 +95,7 @@ const Form = () => {
 
                 <div className="col col-12">
                   <label htmlFor="message" className="form-label">Message <i className="bi bi-pen-fill"></i> <span className="required">*</span></label>
-                  <textarea type="message" rows="5" cols="33" className="form-control" name="message" id="message" onChange={handleMessage} placeholder="Message" value={message} required> </textarea>
+                  <textarea ref={textareaRef} type="message" rows="5" cols="33" className="form-control" name="message" id="message" onChange={handleMessage} placeholder="Message" value={message || ""} required> </textarea>
                 </div>
 
                 <div className="col col-12 col-md-4">
